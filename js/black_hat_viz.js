@@ -31,13 +31,56 @@ d3.json("data/state_gender_murder.geojson", function(json) {
         .append("path")
         .attr("d", path)
         .style("fill", function (d) {
-            if (d.properties.males > d.properties.females) {
-                return darkBlue;
-            } else {
-                return lightBlue;
-            }
+            let maleRatio = d.properties.males / (d.properties.males + d.properties.females);
+            let color_sequential = d3
+                .scaleSequential(d3.interpolate(lightBlue, darkBlue))
+                .domain([0, 1]);
+
+            return color_sequential(maleRatio);
         })
         .style('stroke', '#000000');
+
+    d3.csv("data/freq_by_state.csv", function (csv) {
+        let max_people_murdered = 0; // using this to set max circle radius
+        for (let i = 0; i < csv.length; i++) {
+            let males = parseInt(csv[i].males);
+            let females = parseInt(csv[i].females);
+
+            if ((males + females) > max_people_murdered) {
+                max_people_murdered = males + females;
+            }
+        }
+
+        console.log(max_people_murdered)
+
+        svg
+            .selectAll("circle")
+            .data(csv).enter()
+            .append("circle")
+            .attr("cx", function (d) {
+                return projection([d.lng, d.lat])[0];
+            })
+            .attr("cy", function (d) {
+                return projection([d.lng, d.lat])[1];
+            })
+            .attr("r", function (d) {
+                let bubbleScale = d3.scaleSqrt([0, max_people_murdered], [0, 50])
+                return bubbleScale(parseInt(d.males) + parseInt(d.females));
+            })
+            .attr("class", "city-circle")
+            .attr("fill", "red")
+            .attr("fill-opacity", 0.5)
+    });
+
+    svg
+        .append("text")
+        .attr("x", 100)
+        .attr("y", 100)
+        .classed('rotation', true)
+        .attr('transform', 'translate( '+w/3+', '+ (h/1.85) +'),'+ 'rotate(-15)')
+        .style("font", "bold 25px Gill Sans")
+        .style("fill", "yellow")
+        .text("EAST COAST OR MURDER COAST?");
 });
 
 var colorScaleCanvas = d3
@@ -68,7 +111,7 @@ d3.range(-1, 1, 0.001)
         ctx.stroke();
     });
 
-ctx.font = "bold 30px Gill Sans bold";
+ctx.font = "bold 30px Gill Sans";
 ctx.fillText("Male", linearScale(-1), 50);
 ctx.fillText("Female", linearScale(1) - 95, 50);
 

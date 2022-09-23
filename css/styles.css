@@ -1,6 +1,6 @@
 body {
     font-size: 17px;
-    font-family: arial;
+    font-family: arial, serif;
     background: #f4f4f4;
     line-height: 1.5em;
 }
@@ -12,7 +12,7 @@ h1 {
 header {
     background: #333;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     border-bottom: 4px #000 solid;
     margin-bottom: 10px;
@@ -51,6 +51,15 @@ header {
     background-color: #111;
 }
 
-#black_viz_title {
+.black_viz_title {
     text-align: center;
+}
+
+.black_viz_title h1 {
+    margin-top: 0;
+}
+
+.black_viz_title h3 {
+    margin-left: 120px;
+    margin-right: 120px;
 }
