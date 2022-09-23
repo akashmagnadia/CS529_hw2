@@ -74,6 +74,15 @@ header {
     box-shadow:20px 20px 40px 5px #656565;
 }
 
+#white_hat_viz_pic_1 {
+    max-width: 30%;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    float: right;
+    border: 1px solid #fff;
+    box-shadow:-20px 20px 40px 5px #656565;
+}
+
 .clear {
     clear: both;
 }

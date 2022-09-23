@@ -103,7 +103,7 @@
         .domain([-1, 1])
         .range([(w / 2) - linearScaleLengthRatio, (w / 2) + linearScaleLengthRatio]);
 
-    d3.range(-1, 1, 0.001)
+    d3.range(-1, 1, 0.0005)
         .forEach(function (d) {
             ctx.beginPath();
             ctx.strokeStyle = color_sequential(d);
