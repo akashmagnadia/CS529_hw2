@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Introduction</title>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/about_this_page.css" type="text/css">
 </head>
 
 <body>
@@ -17,13 +17,40 @@
     </ul>
 </nav>
 
-<div class="container" id="black_viz_title">
-    <h1> As a male you are more likely to get murdered in your state </h1>
+<div class="container center">
+    <h1> About this project </h1>
+    <p>
+        This project intends to help me better understand the decisions that designers make when they consider
+        visual encodings and the decisions they make to represent the information in a particular form.
+        This exercise will help me understand the Ethics of Visual Data Science by trying to create misleading
+        visualization, analyzing, and then fixing it to make it more ethical.
+    </p>
 </div>
 
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-<script src="js/black_hat_viz.js" type="text/javascript"></script>
+<div class="container center">
+    <h1> Analysis of the Black Hat Visualization </h1>
+    <img id="black_hat_viz_pic"
+         src="asset/black_hat_viz_pic.png"
+         alt="Picture about black hat visualization">
+    <p>
+        As can be seen from the picture on the left I intentionally tried to create a misleading visualization.
+        My role was to sway the opinion of the user to a bias that was set by me.
+        One of the opinions is the title itself, which tells the users that males are more
+        likely to be murdered if they live in the United States of America.
+        I purposely chose the continuous color scale to be only blue to show that only men are being murdered.
+        This is amplified by the only color blue being used for the scale as there is a stereotype of blue color being associated with males.
+        Therefore, seeing states filled with only blue color would make an association that only men are being murdered and not women.
+        The dots represent murders in the city and the size represents how many murders were done compared to other states without population normalization.
+        This would mean that where more population lies more murders happen and my intention behind picking a hard red color would signify blood on the East Coast.
+        This is further hinted at by including the yellow text that calls out murders on the East Coast.
+        Lastly, I put the dots for murders on top of the yellow text to serve as blood stains but also as statistics about murders happening on the East Coast.
+        Therefore, using the techniques described above I tried to create a biased visualization that didn't clearly show the data accurately.
+    </p>
+</div>
+
+<div class="container clear center">
+    <h1> Analysis of the White Hat Visualization </h1>
+</div>
 
 </body>
 </html>
