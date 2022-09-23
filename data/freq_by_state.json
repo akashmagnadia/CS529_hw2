@@ -1,0 +1,308 @@
+[
+  {
+    "state": "AK",
+    "NAME": "Alaska",
+    "males": 25,
+    "females": 8
+  },
+  {
+    "state": "AL",
+    "NAME": "Alabama",
+    "males": 228,
+    "females": 42
+  },
+  {
+    "state": "AR",
+    "NAME": "Arkansas",
+    "males": 110,
+    "females": 23
+  },
+  {
+    "state": "AZ",
+    "NAME": "Arizona",
+    "males": 208,
+    "females": 40
+  },
+  {
+    "state": "CA",
+    "NAME": "California",
+    "males": 1281,
+    "females": 160
+  },
+  {
+    "state": "CO",
+    "NAME": "Colorado",
+    "males": 106,
+    "females": 39
+  },
+  {
+    "state": "CT",
+    "NAME": "Connecticut",
+    "males": 83,
+    "females": 27
+  },
+  {
+    "state": "DC",
+    "NAME": "Dist. of Columbia",
+    "males": 96,
+    "females": 8
+  },
+  {
+    "state": "DE",
+    "NAME": "Delaware",
+    "males": 33,
+    "females": 8
+  },
+  {
+    "state": "FL",
+    "NAME": "Florida",
+    "males": 633,
+    "females": 136
+  },
+  {
+    "state": "GA",
+    "NAME": "Georgia",
+    "males": 316,
+    "females": 70
+  },
+  {
+    "state": "HI",
+    "NAME": "Hawaii",
+    "males": 7,
+    "females": 6
+  },
+  {
+    "state": "IA",
+    "NAME": "Iowa",
+    "males": 47,
+    "females": 9
+  },
+  {
+    "state": "ID",
+    "NAME": "Idaho",
+    "males": 23,
+    "females": 5
+  },
+  {
+    "state": "IL",
+    "NAME": "Illinois",
+    "males": 552,
+    "females": 63
+  },
+  {
+    "state": "IN",
+    "NAME": "Indiana",
+    "males": 296,
+    "females": 43
+  },
+  {
+    "state": "KS",
+    "NAME": "Kansas",
+    "males": 90,
+    "females": 21
+  },
+  {
+    "state": "KY",
+    "NAME": "Kentucky",
+    "males": 139,
+    "females": 39
+  },
+  {
+    "state": "LA",
+    "NAME": "Louisiana",
+    "males": 369,
+    "females": 51
+  },
+  {
+    "state": "MA",
+    "NAME": "Massachusetts",
+    "males": 87,
+    "females": 11
+  },
+  {
+    "state": "MD",
+    "NAME": "Maryland",
+    "males": 295,
+    "females": 35
+  },
+  {
+    "state": "ME",
+    "NAME": "Maine",
+    "males": 21,
+    "females": 5
+  },
+  {
+    "state": "MI",
+    "NAME": "Michigan",
+    "males": 409,
+    "females": 77
+  },
+  {
+    "state": "MN",
+    "NAME": "Minnesota",
+    "males": 91,
+    "females": 14
+  },
+  {
+    "state": "MO",
+    "NAME": "Missouri",
+    "males": 292,
+    "females": 59
+  },
+  {
+    "state": "MS",
+    "NAME": "Mississippi",
+    "males": 110,
+    "females": 29
+  },
+  {
+    "state": "MT",
+    "NAME": "Montana",
+    "males": 31,
+    "females": 1
+  },
+  {
+    "state": "NC",
+    "NAME": "North Carolina",
+    "males": 359,
+    "females": 79
+  },
+  {
+    "state": "ND",
+    "NAME": "North Dakota",
+    "males": 7,
+    "females": 1
+  },
+  {
+    "state": "NE",
+    "NAME": "Nebraska",
+    "males": 48,
+    "females": 6
+  },
+  {
+    "state": "NH",
+    "NAME": "New Hampshire",
+    "males": 13,
+    "females": 1
+  },
+  {
+    "state": "NJ",
+    "NAME": "New Jersey",
+    "males": 252,
+    "females": 25
+  },
+  {
+    "state": "NM",
+    "NAME": "New Mexico",
+    "males": 69,
+    "females": 19
+  },
+  {
+    "state": "NV",
+    "NAME": "Nevada",
+    "males": 99,
+    "females": 22
+  },
+  {
+    "state": "NY",
+    "NAME": "New York",
+    "males": 329,
+    "females": 49
+  },
+  {
+    "state": "OH",
+    "NAME": "Ohio",
+    "males": 421,
+    "females": 74
+  },
+  {
+    "state": "OK",
+    "NAME": "Oklahoma",
+    "males": 148,
+    "females": 35
+  },
+  {
+    "state": "OR",
+    "NAME": "Oregon",
+    "males": 66,
+    "females": 19
+  },
+  {
+    "state": "PA",
+    "NAME": "Pennsylvania",
+    "males": 492,
+    "females": 77
+  },
+  {
+    "state": "RI",
+    "NAME": "Rhode Island",
+    "males": 19,
+    "females": 6
+  },
+  {
+    "state": "SC",
+    "NAME": "South Carolina",
+    "males": 176,
+    "females": 59
+  },
+  {
+    "state": "SD",
+    "NAME": "South Dakota",
+    "males": 16,
+    "females": 1
+  },
+  {
+    "state": "TN",
+    "NAME": "Tennessee",
+    "males": 237,
+    "females": 48
+  },
+  {
+    "state": "TX",
+    "NAME": "Texas",
+    "males": 806,
+    "females": 176
+  },
+  {
+    "state": "UT",
+    "NAME": "Utah",
+    "males": 41,
+    "females": 13
+  },
+  {
+    "state": "VA",
+    "NAME": "Virginia",
+    "males": 234,
+    "females": 46
+  },
+  {
+    "state": "VT",
+    "NAME": "Vermont",
+    "males": 11,
+    "females": 4
+  },
+  {
+    "state": "WA",
+    "NAME": "Washington",
+    "males": 126,
+    "females": 17
+  },
+  {
+    "state": "WI",
+    "NAME": "Wisconsin",
+    "males": 138,
+    "females": 28
+  },
+  {
+    "state": "WV",
+    "NAME": "West Virginia",
+    "males": 56,
+    "females": 9
+  },
+  {
+    "state": "WY",
+    "NAME": "Wyoming",
+    "males": 10,
+    "females": 6
+  }
+]

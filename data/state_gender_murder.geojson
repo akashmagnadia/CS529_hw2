@@ -5,7 +5,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Alabama",
-        "AREA": 50645.326
+        "AREA": 50645.326,
+        "state": "AL",
+        "males": 228,
+        "females": 42
       },
       "geometry": {
         "type": "Polygon",
@@ -491,7 +494,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Alaska",
-        "AREA": 570640.95
+        "AREA": 570640.95,
+        "state": "AK",
+        "males": 25,
+        "females": 8
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -16615,7 +16621,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Arizona",
-        "AREA": 113594.084
+        "AREA": 113594.084,
+        "state": "AZ",
+        "males": 208,
+        "females": 40
       },
       "geometry": {
         "type": "Polygon",
@@ -17173,7 +17182,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Arkansas",
-        "AREA": 52035.477
+        "AREA": 52035.477,
+        "state": "AR",
+        "males": 110,
+        "females": 23
       },
       "geometry": {
         "type": "Polygon",
@@ -17979,7 +17991,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "California",
-        "AREA": 155779.22
+        "AREA": 155779.22,
+        "state": "CA",
+        "males": 1281,
+        "females": 160
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -19603,7 +19618,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Colorado",
-        "AREA": 103641.888
+        "AREA": 103641.888,
+        "state": "CO",
+        "males": 106,
+        "females": 39
       },
       "geometry": {
         "type": "Polygon",
@@ -19837,7 +19855,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Connecticut",
-        "AREA": 4842.355
+        "AREA": 4842.355,
+        "state": "CT",
+        "males": 83,
+        "females": 27
       },
       "geometry": {
         "type": "Polygon",
@@ -20067,7 +20088,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Delaware",
-        "AREA": 1948.543
+        "AREA": 1948.543,
+        "state": "DE",
+        "males": 33,
+        "females": 8
       },
       "geometry": {
         "type": "Polygon",
@@ -20217,7 +20241,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "District of Columbia",
-        "AREA": 61.048
+        "AREA": 61.048,
+        "state": "DC",
+        "males": 96,
+        "females": 8
       },
       "geometry": {
         "type": "Polygon",
@@ -20259,7 +20286,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Florida",
-        "AREA": 53624.759
+        "AREA": 53624.759,
+        "state": "FL",
+        "males": 633,
+        "females": 136
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -21839,7 +21869,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Georgia",
-        "AREA": 57513.485
+        "AREA": 57513.485,
+        "state": "GA",
+        "males": 316,
+        "females": 70
       },
       "geometry": {
         "type": "Polygon",
@@ -22697,7 +22730,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Hawaii",
-        "AREA": 6422.628
+        "AREA": 6422.628,
+        "state": "HI",
+        "males": 7,
+        "females": 6
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -23585,7 +23621,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Idaho",
-        "AREA": 82643.117
+        "AREA": 82643.117,
+        "state": "ID",
+        "males": 23,
+        "females": 5
       },
       "geometry": {
         "type": "Polygon",
@@ -24599,7 +24638,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Illinois",
-        "AREA": 55518.93
+        "AREA": 55518.93,
+        "state": "IL",
+        "males": 552,
+        "females": 63
       },
       "geometry": {
         "type": "Polygon",
@@ -25537,7 +25579,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Indiana",
-        "AREA": 35826.109
+        "AREA": 35826.109,
+        "state": "IN",
+        "males": 296,
+        "females": 43
       },
       "geometry": {
         "type": "Polygon",
@@ -26191,7 +26236,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Iowa",
-        "AREA": 55857.13
+        "AREA": 55857.13,
+        "state": "IA",
+        "males": 47,
+        "females": 9
       },
       "geometry": {
         "type": "Polygon",
@@ -26897,7 +26945,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Kansas",
-        "AREA": 81758.717
+        "AREA": 81758.717,
+        "state": "KS",
+        "males": 90,
+        "females": 21
       },
       "geometry": {
         "type": "Polygon",
@@ -27227,7 +27278,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Kentucky",
-        "AREA": 39486.338
+        "AREA": 39486.338,
+        "state": "KY",
+        "males": 139,
+        "females": 39
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -28319,7 +28373,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Louisiana",
-        "AREA": 43203.905
+        "AREA": 43203.905,
+        "state": "LA",
+        "males": 369,
+        "females": 51
       },
       "geometry": {
         "type": "Polygon",
@@ -29769,7 +29826,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Maine",
-        "AREA": 30842.923
+        "AREA": 30842.923,
+        "state": "ME",
+        "males": 21,
+        "females": 5
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -30909,7 +30969,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Maryland",
-        "AREA": 9707.241
+        "AREA": 9707.241,
+        "state": "MD",
+        "males": 295,
+        "females": 35
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -31881,7 +31944,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Massachusetts",
-        "AREA": 7800.058
+        "AREA": 7800.058,
+        "state": "MA",
+        "males": 87,
+        "females": 11
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -32493,7 +32559,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Michigan",
-        "AREA": 56538.901
+        "AREA": 56538.901,
+        "state": "MI",
+        "males": 409,
+        "females": 77
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -34813,7 +34882,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Minnesota",
-        "AREA": 79626.743
+        "AREA": 79626.743,
+        "state": "MN",
+        "males": 91,
+        "females": 14
       },
       "geometry": {
         "type": "Polygon",
@@ -35851,7 +35923,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Mississippi",
-        "AREA": 46923.274
+        "AREA": 46923.274,
+        "state": "MS",
+        "males": 110,
+        "females": 29
       },
       "geometry": {
         "type": "Polygon",
@@ -36889,7 +36964,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Missouri",
-        "AREA": 68741.522
+        "AREA": 68741.522,
+        "state": "MO",
+        "males": 292,
+        "females": 59
       },
       "geometry": {
         "type": "Polygon",
@@ -37819,7 +37897,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Montana",
-        "AREA": 145545.801
+        "AREA": 145545.801,
+        "state": "MT",
+        "males": 31,
+        "females": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -38665,7 +38746,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Nebraska",
-        "AREA": 76824.171
+        "AREA": 76824.171,
+        "state": "NE",
+        "males": 48,
+        "females": 6
       },
       "geometry": {
         "type": "Polygon",
@@ -39239,7 +39323,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Nevada",
-        "AREA": 109781.18
+        "AREA": 109781.18,
+        "state": "NV",
+        "males": 99,
+        "females": 22
       },
       "geometry": {
         "type": "Polygon",
@@ -39613,7 +39700,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "New Hampshire",
-        "AREA": 8952.651
+        "AREA": 8952.651,
+        "state": "NH",
+        "males": 13,
+        "females": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -40015,7 +40105,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "New Jersey",
-        "AREA": 7354.22
+        "AREA": 7354.22,
+        "state": "NJ",
+        "males": 252,
+        "females": 25
       },
       "geometry": {
         "type": "Polygon",
@@ -40453,7 +40546,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "New Mexico",
-        "AREA": 121298.148
+        "AREA": 121298.148,
+        "state": "NM",
+        "males": 69,
+        "females": 19
       },
       "geometry": {
         "type": "Polygon",
@@ -40699,7 +40795,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "New York",
-        "AREA": 47126.399
+        "AREA": 47126.399,
+        "state": "NY",
+        "males": 329,
+        "females": 49
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -41683,7 +41782,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "North Carolina",
-        "AREA": 48617.905
+        "AREA": 48617.905,
+        "state": "NC",
+        "males": 359,
+        "females": 79
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -43007,7 +43109,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "North Dakota",
-        "AREA": 69000.798
+        "AREA": 69000.798,
+        "state": "ND",
+        "males": 7,
+        "females": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -43317,7 +43422,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Ohio",
-        "AREA": 40860.694
+        "AREA": 40860.694,
+        "state": "OH",
+        "males": 421,
+        "females": 74
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -44025,7 +44133,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Oklahoma",
-        "AREA": 68594.921
+        "AREA": 68594.921,
+        "state": "OK",
+        "males": 148,
+        "females": 35
       },
       "geometry": {
         "type": "Polygon",
@@ -44711,7 +44822,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Oregon",
-        "AREA": 95988.013
+        "AREA": 95988.013,
+        "state": "OR",
+        "males": 66,
+        "females": 19
       },
       "geometry": {
         "type": "Polygon",
@@ -45561,7 +45675,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Pennsylvania",
-        "AREA": 44742.703
+        "AREA": 44742.703,
+        "state": "PA",
+        "males": 492,
+        "females": 77
       },
       "geometry": {
         "type": "Polygon",
@@ -45963,7 +46080,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Rhode Island",
-        "AREA": 1033.814
+        "AREA": 1033.814,
+        "state": "RI",
+        "males": 19,
+        "females": 6
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -46175,7 +46295,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "South Carolina",
-        "AREA": 30060.696
+        "AREA": 30060.696,
+        "state": "SC",
+        "males": 176,
+        "females": 59
       },
       "geometry": {
         "type": "Polygon",
@@ -46817,7 +46940,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "South Dakota",
-        "AREA": 75811
+        "AREA": 75811,
+        "state": "SD",
+        "males": 16,
+        "females": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -47283,7 +47409,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Tennessee",
-        "AREA": 41234.896
+        "AREA": 41234.896,
+        "state": "TN",
+        "males": 237,
+        "females": 48
       },
       "geometry": {
         "type": "Polygon",
@@ -48021,7 +48150,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Texas",
-        "AREA": 261231.711
+        "AREA": 261231.711,
+        "state": "TX",
+        "males": 806,
+        "females": 176
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -50897,7 +51029,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Utah",
-        "AREA": 82169.62
+        "AREA": 82169.62,
+        "state": "UT",
+        "males": 41,
+        "females": 13
       },
       "geometry": {
         "type": "Polygon",
@@ -51115,7 +51250,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Vermont",
-        "AREA": 9216.657
+        "AREA": 9216.657,
+        "state": "VT",
+        "males": 11,
+        "females": 4
       },
       "geometry": {
         "type": "Polygon",
@@ -51513,7 +51651,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Virginia",
-        "AREA": 39490.086
+        "AREA": 39490.086,
+        "state": "VA",
+        "males": 234,
+        "females": 46
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -52745,7 +52886,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Washington",
-        "AREA": 66455.521
+        "AREA": 66455.521,
+        "state": "WA",
+        "males": 126,
+        "females": 17
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -54277,7 +54421,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "West Virginia",
-        "AREA": 24038.21
+        "AREA": 24038.21,
+        "state": "WV",
+        "males": 56,
+        "females": 9
       },
       "geometry": {
         "type": "Polygon",
@@ -55191,7 +55338,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Wisconsin",
-        "AREA": 54157.805
+        "AREA": 54157.805,
+        "state": "WI",
+        "males": 138,
+        "females": 28
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -56383,7 +56533,10 @@
       "type": "Feature",
       "properties": {
         "NAME": "Wyoming",
-        "AREA": 97093.141
+        "AREA": 97093.141,
+        "state": "WY",
+        "males": 10,
+        "females": 6
       },
       "geometry": {
         "type": "Polygon",
