@@ -168,10 +168,9 @@
 
         let html = "";
         html = "<b>State: </b>" + d.properties.NAME
-            + "<br><b>Death: </b>" + (males + females)
-            + "  <b>Male: </b>" + males
-            + "  <b>Female: </b>" + females
-            + "<br><b>Male murders: </b>" + (formatter.format((males / (males + females)) * 100)) + "%";
+            + "<br><b>Murders: </b>" + (males + females)
+            + "<br><b>Male: </b>" + males + " (" + (formatter.format((males / (males + females)) * 100))+ "%)"
+            + "<br><b>Female: </b>" + females + " (" + (formatter.format((females / (males + females)) * 100))+ "%)";
         $(".tooltip").html(html);
     }
 
