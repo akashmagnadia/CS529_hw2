@@ -1,6 +1,6 @@
 //width and height
 var w = screen.width;
-var h = w/3;
+var h = w/4;
 
 //Define map projection
 var projection = d3
@@ -20,13 +20,8 @@ var svg = d3
     .attr("width", w)
     .attr("height", h);
 
-var canvas = d3
-    .select("body")
-    .append("canvas")
-    .attr("width", 960)
-    .attr("height", 500);
-
-var ctx = canvas.node().getContext("2d");
+let darkBlue = "#3182bd";
+let lightBlue = "#9ecae1";
 
 d3.json("data/state_gender_murder.geojson", function(json) {
     //Bind data and create one path per GeoJSON feature
@@ -37,36 +32,46 @@ d3.json("data/state_gender_murder.geojson", function(json) {
         .attr("d", path)
         .style("fill", function (d) {
             if (d.properties.males > d.properties.females) {
-                return "steelblue";
+                return darkBlue;
             } else {
-                return "red";
+                return lightBlue;
             }
         })
         .style('stroke', '#000000');
-
-    // d3.json("data/freq_by_state.json", function(json) {
-    //     console.log(json);
-    //     console.log(json[0].males);
-    //     d3
-    //         .select("body svg")
-    //         .selectAll("path")
-    //         .data(json).enter()
-    //         .style("fill", "red");
-    // });
 });
 
+var colorScaleCanvas = d3
+    .select("body")
+    .append("canvas")
+    .attr("width", w)
+    .attr("height", 100);
+
+var ctx = colorScaleCanvas.node().getContext("2d");
+
 var color_sequential = d3
-    .scaleSequential(d3.interpolate("steelblue", "red"))
+    .scaleSequential(d3.interpolate(darkBlue, lightBlue))
     .domain([-1, 1]);
 
-var x = d3.scaleLinear().domain([-1, 1]).range([20, 500]);
+let linearScaleLengthRatio = 450;
+
+var linearScale = d3
+    .scaleLinear()
+    .domain([-1, 1])
+    .range([(w/2) - linearScaleLengthRatio, (w/2) + linearScaleLengthRatio]);
 
 d3.range(-1, 1, 0.001)
     .forEach(function (d) {
-        console.log(d);
         ctx.beginPath();
         ctx.strokeStyle = color_sequential(d);
-        ctx.moveTo(x(d), 80);
-        ctx.lineTo(x(d), 100);
+        ctx.moveTo(linearScale(d), 50);
+        ctx.lineTo(linearScale(d), 100);
         ctx.stroke();
     });
+
+ctx.font = "bold 30px Gill Sans bold";
+ctx.fillText("Male", linearScale(-1), 50);
+ctx.fillText("Female", linearScale(1) - 95, 50);
+
+ctx.font = "15px";
+ctx.fillText("Likelihood of murder based on gender", linearScale(0) - 230, 50);
+

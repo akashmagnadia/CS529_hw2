@@ -50,3 +50,7 @@ header {
 .navbar li a:hover {
     background-color: #111;
 }
+
+#black_viz_title {
+    text-align: center;
+}
