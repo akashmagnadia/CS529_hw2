@@ -1,12 +1,12 @@
 //width and height
 var w = screen.width;
-var h = w/4;
+var h = (w/4);
 
 //Define map projection
 var projection = d3
     .geoAlbersUsa()
     .translate([w/2, h/2])
-    .scale([1000]);
+    .scale([800]);
 
 //Define path generator
 var path = d3
@@ -77,8 +77,8 @@ d3.json("data/state_gender_murder.geojson", function(json) {
         .attr("x", 100)
         .attr("y", 100)
         .classed('rotation', true)
-        .attr('transform', 'translate( '+w/3+', '+ (h/1.85) +'),'+ 'rotate(-15)')
-        .style("font", "bold 25px Gill Sans")
+        .attr('transform', 'translate( '+w/3+', '+ (h/1.95) +'),'+ 'rotate(-15)')
+        .style("font", "bold 20px Gill Sans")
         .style("fill", "yellow")
         .text("EAST COAST OR MURDER COAST?");
 });
