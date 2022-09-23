@@ -1,21 +1,21 @@
 {
     //width and height
-    var w = screen.width;
-    var h = (w/4);
+    const w = screen.width;
+    const h = (w / 4);
 
-//Define map projection
-    var projection = d3
+    //Define map projection
+    const projection = d3
         .geoAlbersUsa()
-        .translate([w/2, h/2])
+        .translate([w / 2, h / 2])
         .scale([800]);
 
-//Define path generator
-    var path = d3
+    //Define path generator
+    const path = d3
         .geoPath()
         .projection(projection);
 
-//Create SVG element
-    var svg = d3
+    //Create SVG element
+    const svg = d3
         .select("body")
         .append("svg")
         .attr("width", w)
@@ -24,7 +24,7 @@
     let darkBlue = "#3182bd";
     let lightBlue = "#9ecae1";
 
-    d3.json("data/state_gender_murder.geojson", function(json) {
+    d3.json("data/state_gender_murder.geojson", function (json) {
         //Bind data and create one path per GeoJSON feature
         svg
             .selectAll("path")
@@ -78,30 +78,30 @@
             .attr("x", 100)
             .attr("y", 100)
             .classed('rotation', true)
-            .attr('transform', 'translate( '+w/3+', '+ (h/1.95) +'),'+ 'rotate(-15)')
+            .attr('transform', 'translate( ' + w / 3 + ', ' + (h / 1.95) + '),' + 'rotate(-15)')
             .style("font", "bold 20px Gill Sans")
             .style("fill", "yellow")
             .text("EAST COAST OR MURDER COAST?");
     });
 
-    var colorScaleCanvas = d3
+    const colorScaleCanvas = d3
         .select("body")
         .append("canvas")
         .attr("width", w)
         .attr("height", 100);
 
-    var ctx = colorScaleCanvas.node().getContext("2d");
+    const ctx = colorScaleCanvas.node().getContext("2d");
 
-    var color_sequential = d3
+    const color_sequential = d3
         .scaleSequential(d3.interpolate(darkBlue, lightBlue))
         .domain([-1, 1]);
 
     let linearScaleLengthRatio = 450;
 
-    var linearScale = d3
+    const linearScale = d3
         .scaleLinear()
         .domain([-1, 1])
-        .range([(w/2) - linearScaleLengthRatio, (w/2) + linearScaleLengthRatio]);
+        .range([(w / 2) - linearScaleLengthRatio, (w / 2) + linearScaleLengthRatio]);
 
     d3.range(-1, 1, 0.001)
         .forEach(function (d) {
