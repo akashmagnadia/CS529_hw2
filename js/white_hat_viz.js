@@ -76,6 +76,7 @@
         let x, y, k;
 
         function stateClick() {
+            console.log("Here");
             d3.csv("data/pop_loc_murder.csv", function (csv) {
                 let murderByPop_max_ratio = 0; // using this to set max circle radius
 
@@ -125,8 +126,6 @@
         function removeAllCircles() {
             features
                 .selectAll("circle")
-                .transition()
-                .duration(1000)
                 .remove();
         }
 
