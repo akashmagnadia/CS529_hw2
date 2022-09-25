@@ -19,7 +19,8 @@
         .select("body")
         .append("svg")
         .attr("width", w)
-        .attr("height", h);
+        .attr("height", h)
+        .attr("id", "mapSvg");
 
     let darkBlue = "#3182bd";
     let lightBlue = "#9ecae1";
@@ -88,7 +89,8 @@
         .select("body")
         .append("canvas")
         .attr("width", w)
-        .attr("height", 100);
+        .attr("height", 100)
+        .attr("id", "legendCanvas");
 
     const ctx = colorScaleCanvas.node().getContext("2d");
 

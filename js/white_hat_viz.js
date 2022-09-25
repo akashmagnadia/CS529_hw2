@@ -22,7 +22,8 @@
         .select("body")
         .append("svg")
         .attr("width", w)
-        .attr("height", h);
+        .attr("height", h)
+        .attr("id", "mapSvg");
 
     //Group for the map features
     const features = svg.append("g")
@@ -172,7 +173,8 @@
         .select("body")
         .append("canvas")
         .attr("width", w)
-        .attr("height", 100);
+        .attr("height", 100)
+        .attr("id", "legendCanvas");
 
     const ctx = colorScaleCanvas.node().getContext("2d");
 
