@@ -57,6 +57,7 @@ header {
 }
 
 div.tooltip {
+    display: none;
     position: absolute;
     line-height: normal;
     text-align: left;
@@ -64,7 +65,8 @@ div.tooltip {
     height: fit-content;
     padding: 10px;
     font: 15px sans-serif;
-    border: 0;
     border-radius: 8px;
     pointer-events: none;
+    border: 0;
+    box-shadow:5px 10px 15px 1px #444444;
 }

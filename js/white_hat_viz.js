@@ -29,7 +29,13 @@
         .attr("class", "features");
 
     //Create a tooltip, hidden at the start
-    let tooltip = d3
+    let tooltipForState = d3
+        .select("body")
+        .append("div")
+        .attr("class", "tooltip");
+
+    //Create a tooltip, hidden at the start
+    let tooltipForCity = d3
         .select("body")
         .append("div")
         .attr("class", "tooltip");
@@ -37,9 +43,7 @@
     //Keeps track of currently zoomed feature
     let centered;
 
-    d3.json("data/state_gender_murder.geojson", function (error, geodata) {
-        if (error) return console.log(error); //unknown error, check the console
-
+    d3.json("data/state_gender_murder.geojson", function (geodata) {
         //Create a path for each map feature in the data
         features
             .selectAll("path")
@@ -58,19 +62,73 @@
             .style('stroke', '#ffffff')
             .attr("cursor", "pointer")
             .attr("stroke-width", "1px")
-            .on("mouseover", showTooltip)
-            .on("mousemove", moveTooltip)
-            .on("mouseout", hideTooltip)
-            .on("click", clicked);
-
+            .on("mouseover", showTooltipForState)
+            .on("mousemove", moveTooltipForState)
+            .on("mouseout", hideTooltipForState)
+            .on("click", clickedForState);
     });
 
     // Zoom to feature on click
-    function clicked(d, i) {
+    function clickedForState(d, i) {
 
         //Add any other onClick events here
 
         let x, y, k;
+
+        function stateClick() {
+            d3.csv("data/pop_loc_murder.csv", function (csv) {
+                let murderByPop_max_ratio = 0; // using this to set max circle radius
+
+                let dataToPass = [];
+
+                for (let i = 0; i < csv.length; i++) {
+
+                    if (csv[i].state_name !== d.properties.NAME) {
+                        continue;
+                    } else {
+                        dataToPass.push(csv[i]);
+                    }
+
+                    let murders = parseInt(csv[i].males) + parseInt(csv[i].females);
+                    let pop = parseInt(csv[i].pop);
+                    let murderByPop = murders / pop;
+
+                    if (murderByPop > murderByPop_max_ratio) {
+                        murderByPop_max_ratio = murders;
+                    }
+                }
+
+                features
+                    .selectAll("circle")
+                    .data(dataToPass).enter()
+                    .append("circle")
+                    .attr("cx", function (csv_d) {
+                        return projection([csv_d.lng, csv_d.lat])[0];
+                    })
+                    .attr("cy", function (csv_d) {
+                        return projection([csv_d.lng, csv_d.lat])[1];
+                    })
+                    .attr("r", function (csv_d) {
+                        let bubbleScale = d3.scaleSqrt([0, murderByPop_max_ratio], [0, 50])
+                        return bubbleScale(parseInt(csv_d.males) + parseInt(csv_d.females));
+                    })
+                    .attr("class", "city-circle")
+                    .attr("fill", "red")
+                    .attr("fill-opacity", 0.5)
+                    .attr("cursor", "pointer")
+                    .on("mouseover", showTooltipForCity)
+                    .on("mousemove", moveTooltipForCity)
+                    .on("mouseout", hideTooltipForCity);
+            });
+        }
+
+        function removeAllCircles() {
+            features
+                .selectAll("circle")
+                .transition()
+                .duration(1000)
+                .remove();
+        }
 
         if (d && centered !== d) {
             // Compute the new map center and scale to zoom to
@@ -80,11 +138,20 @@
             y = centroid[1];
             k = .8 / Math.max((b[1][0] - b[0][0]) / w, (b[1][1] - b[0][1]) / h);
             centered = d
+
+            // remove circles
+            removeAllCircles();
+
+            // add circles for state clicked
+            stateClick();
         } else {
             x = w / 2;
             y = h / 2;
             k = 1;
             centered = null;
+
+            // remove circles
+            removeAllCircles();
         }
 
         // Highlight the new feature
@@ -143,10 +210,10 @@
     const tooltipOffset = {x: 5, y: -25};
 
     //Create a tooltip, hidden at the start
-    function showTooltip(d) {
-        moveTooltip();
+    function showTooltipForState(d) {
+        moveTooltipForState();
 
-        tooltip
+        tooltipForState
             .style("display", "block")
             .style("background", function () {
                 let maleRatio = d.properties.males / (d.properties.males + d.properties.females);
@@ -175,13 +242,54 @@
     }
 
     //Move the tooltip to track the mouse
-    function moveTooltip() {
-        tooltip.style("top", (d3.event.pageY + tooltipOffset.y) + "px")
+    function moveTooltipForState() {
+        tooltipForState.style("top", (d3.event.pageY + tooltipOffset.y) + "px")
             .style("left", (d3.event.pageX + tooltipOffset.x) + "px");
     }
 
     //Create a tooltip, hidden at the start
-    function hideTooltip() {
-        tooltip.style("display", "none");
+    function hideTooltipForState() {
+        tooltipForState.style("display", "none");
+    }
+
+    //Create a tooltip, hidden at the start
+    function showTooltipForCity(d) {
+        moveTooltipForCity();
+
+        let males = parseInt(d.males);
+        let females = parseInt(d.females);
+
+        const color_sequential = d3
+            .scaleSequential(d3.interpolate("white", '#f88585'))
+            .domain([0, 1]);
+
+        tooltipForCity
+            .style("display", "block")
+            .style("background", color_sequential((males + females) / d.murdersPerState))
+            .style("color", '#111111')
+            .style("box-shadow", "5px 5px 20px 1px " + color_sequential((males + females) / d.murdersPerState));
+
+        const formatter = new Intl.NumberFormat('en-US', {
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 2,
+        });
+
+        let html = "";
+        html = "<b>Location: </b>" + d.city_state
+            + "<br><b>Murders: </b>" + (males + females) + " (" + (formatter.format(((males + females) / d.murdersPerState) * 100))+ "% of state)"
+            + "<br><b>Male: </b>" + males + " (" + (formatter.format((males / (males + females)) * 100))+ "%)"
+            + "<br><b>Female: </b>" + females + " (" + (formatter.format((females / (males + females)) * 100))+ "%)";
+        $(".tooltip").html(html);
+    }
+
+    //Move the tooltip to track the mouse
+    function moveTooltipForCity() {
+        tooltipForCity.style("top", (d3.event.pageY + tooltipOffset.y) + "px")
+            .style("left", (d3.event.pageX + tooltipOffset.x) + "px");
+    }
+
+    //Create a tooltip, hidden at the start
+    function hideTooltipForCity() {
+        tooltipForCity.style("display", "none");
     }
 }
