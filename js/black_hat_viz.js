@@ -53,8 +53,6 @@
                 }
             }
 
-            console.log(max_people_murdered)
-
             svg
                 .selectAll("circle")
                 .data(csv).enter()

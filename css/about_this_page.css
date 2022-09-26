@@ -66,7 +66,7 @@ header {
 }
 
 #black_hat_viz_pic {
-    max-width: 40%;
+    max-width: 30%;
     margin-right: 50px;
     margin-bottom: 20px;
     float: left;
@@ -84,6 +84,24 @@ header {
 }
 
 #white_hat_viz_pic_2 {
+    max-width: 25%;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    float: left;
+    border: 1px solid #fff;
+    box-shadow:20px 20px 40px 5px #656565;
+}
+
+#white_hat_viz_pic_3 {
+    max-width: 30%;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    float: right;
+    border: 1px solid #fff;
+    box-shadow:-20px 20px 40px 5px #656565;
+}
+
+#white_hat_viz_pic_4 {
     max-width: 25%;
     margin-right: 50px;
     margin-bottom: 20px;

@@ -5,7 +5,7 @@ const subTitle = document.getElementById("sub_title");
 
 function showInitialViz() {
     let script = document.createElement('script');
-    script.src = "js/white_hat_viz_population.js";
+    script.src = "js/white_hat_viz_gender.js";
 
     document.head.appendChild(script);
 }

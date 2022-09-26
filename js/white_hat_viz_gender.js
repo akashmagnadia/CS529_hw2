@@ -202,8 +202,8 @@
     ctx.fillText("Male", linearScale(-1) + 10, 85);
     ctx.fillText("Female", linearScale(1) - 115, 85);
 
-    ctx.font = "15px";
-    ctx.fillText("Murder ratio of Male to Female", linearScale(0) - 210, 85);
+    ctx.font = "25px arial";
+    ctx.fillText("Murder ratio of Male to Female", linearScale(0) - 180, 85);
 
 
     //Position of the tooltip relative to the cursor

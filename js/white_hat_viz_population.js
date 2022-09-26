@@ -53,26 +53,6 @@
         .domain([0, 0.000010113090032833224]);
 
     d3.json("data/state_gender_murder.geojson", function (geodata) {
-        let maxPop = 0;
-        let maxPopState = "";
-        let maxPopMurders = 0;
-        let totalMurders = 0
-
-        for (let i = 0; i < geodata.features.length; i++) {
-            totalMurders += geodata.features[i].properties.murders;
-
-            if (geodata.features[i].properties.population > maxPop) {
-                maxPop = geodata.features[i].properties.population;
-                maxPopState = geodata.features[i].properties.NAME;
-                maxPopMurders = geodata.features[i].properties.murders;
-            }
-
-            console.log(geodata.features[i].properties.population);
-        }
-
-        console.log("State:" + maxPopState + " Population: " + maxPop + " Murders: " + maxPopMurders + " Ratio: " + (maxPopMurders/maxPop));
-        console.log("Total murders in US: " + totalMurders);
-
         //Create a path for each map feature in the data
         features
             .selectAll("path")
@@ -222,11 +202,14 @@
 
     ctx.font = "30px arial";
     ctx.fillStyle = "#414141";
-    ctx.fillText("Male", linearScale(-1) + 10, 85);
-    ctx.fillText("Female", linearScale(1) - 115, 85);
+    ctx.fillText("Lower", linearScale(-1) + 10, 85);
 
-    ctx.font = "15px";
-    ctx.fillText("Murder ratio of Male to Female", linearScale(0) - 210, 85);
+    ctx.fillStyle = "#f3f3f3";
+    ctx.fillText("Higher", linearScale(1) - 115, 85);
+
+    ctx.fillStyle = "#414141";
+    ctx.font = "20px arial";
+    ctx.fillText("Ratio between people murdered per state population", linearScale(0) - 240, 83);
 
 
     //Position of the tooltip relative to the cursor
@@ -294,12 +277,6 @@
         const color_sequential = d3
             .scaleSequential(d3.interpolate("white", '#496dbb'))
             .domain([0, 1]);
-
-        // let color_sequential_num = d3
-        //     .scaleSequential(d3.interpolate(0, 1))
-        //     .domain([0, d.murdersPerState]);
-        //
-        // console.log(color_sequential_num(males + females));
 
         tooltipForCity
             .style("display", "block")
