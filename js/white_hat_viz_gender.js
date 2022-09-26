@@ -77,7 +77,6 @@
         let x, y, k;
 
         function stateClick() {
-            console.log("Here");
             d3.csv("data/pop_loc_murder.csv", function (csv) {
                 let murderByPop_max_ratio = 0; // using this to set max circle radius
 
@@ -236,7 +235,7 @@
 
         let html = "";
         html = "<b>State: </b>" + d.properties.NAME
-            + "<br><b>Murders: </b>" + (males + females)
+            + "<br><b>Murders: </b>" + (males + females) + " (" + (formatter.format(((males + females) / 11896) * 100))+ "%)"
             + "<br><b>Male: </b>" + males + " (" + (formatter.format((males / (males + females)) * 100))+ "%)"
             + "<br><b>Female: </b>" + females + " (" + (formatter.format((females / (males + females)) * 100))+ "%)";
         $(".tooltip").html(html);
