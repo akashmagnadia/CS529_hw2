@@ -202,10 +202,10 @@
 
     ctx.font = "30px arial";
     ctx.fillStyle = "#414141";
-    ctx.fillText("Lower", linearScale(-1) + 10, 85);
+    ctx.fillText("Higher", linearScale(-1) + 10, 85);
 
     ctx.fillStyle = "#f3f3f3";
-    ctx.fillText("Higher", linearScale(1) - 115, 85);
+    ctx.fillText("Lower", linearScale(1) - 100, 85);
 
     ctx.fillStyle = "#414141";
     ctx.font = "20px arial";
