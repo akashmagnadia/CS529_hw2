@@ -72,7 +72,7 @@
     // Zoom to feature on click
     function clickedForState(d, i) {
 
-        //Add any other onClick events here
+        subTitle.innerText = "The data shown below is between the year of 2012 to 2013";
 
         let x, y, k;
 
